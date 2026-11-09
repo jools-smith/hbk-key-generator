@@ -1,13 +1,14 @@
-package com.revenera.gcs.webservices;
+package com.revenera.gcs.implementor;
 
 import com.flexnet.external.type.*;
 
-public interface KeyGenerator {
+public interface GeneratorInterface {
+
   Status validateProduct(ProductRequest request);
 
   Status validateLicenseModel(LicenseModelRequest request);
 
-   GeneratorResponse generateLicense(GeneratorRequest request);
+  GeneratorResponse generateLicense(GeneratorRequest request);
 
   ConsolidatedLicense consolidateFulfillments(FulfillmentRecordSet request);
 

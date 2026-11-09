@@ -6,6 +6,8 @@ import com.flexnet.external.webservice.keygenerator.LicenseGeneratorServiceInter
 import com.revenera.gcs.ApplicationProperties;
 import com.revenera.gcs.Beans;
 import com.revenera.gcs.ExecutionContext;
+import com.revenera.gcs.implementor.GeneratorInterface;
+import com.revenera.gcs.implementor.LMXImplementor;
 import com.revenera.gcs.utils.HandyBag;
 import com.revenera.gcs.utils.Serializer;
 import org.apache.commons.lang3.NotImplementedException;
@@ -24,8 +26,8 @@ import java.time.Instant;
 public class LicenseGeneratorServiceImpl extends ServiceProperties implements LicenseGeneratorServiceInterface {
 
   ///TODO:rip this out
-  private static KeyGenerator generator() {
-    throw new NotImplementedException("Not yet implemented");
+  private static GeneratorInterface generator() {
+    return new LMXImplementor();
   }
 
   public LicenseGeneratorServiceImpl() {
